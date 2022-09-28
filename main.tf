@@ -10,12 +10,14 @@ provider "kubernetes" {
 
 provider "aws" {
   region = var.region
+  profile = "eksLogisto"
 }
 
 data "aws_availability_zones" "available" {}
 
 locals {
-  cluster_name = "education-eks-${random_string.suffix.result}"
+  domain_name = "talentpitch"
+  cluster_name = "${local.domain_name}-eks"
 }
 
 resource "random_string" "suffix" {
