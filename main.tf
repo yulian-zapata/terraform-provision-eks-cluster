@@ -10,7 +10,7 @@ provider "kubernetes" {
 
 provider "aws" {
   region = var.region
-  profile = "eksLogisto"
+  //profile = ""
 }
 
 data "aws_availability_zones" "available" {}
