@@ -10,13 +10,13 @@ provider "kubernetes" {
 
 provider "aws" {
   region = var.region
-  //profile = ""
+  //profile = "" //TODO : CAMBIO DE PROFILE
 }
 
 data "aws_availability_zones" "available" {}
 
 locals {
-  domain_name = "talentpitch"
+  domain_name = "one" //TODO : CAMBIO DE NOMBRE PROYECTO
   cluster_name = "${local.domain_name}-eks"
 }
 
